@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'VT323', monospace;
 }
 button{
     transition: all 0.5s;
@@ -14,23 +14,29 @@ body{
     color: #18BA29;
     background-color: #000000;
 }
-
 header{
     text-align: center;
 }
+
 
 header h1{
     font-size: 2.5rem;
     margin-top: 5%;
     margin-bottom: 2rem;
 }
+header h2{
+    padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
 header h2, .forFree{
     font-size: 1.5rem;
 }
 
+
 .forFree{
     color: red;
-}
+    box-shadow: 0 0 5.5rem red;
+}   
 
 .container{
     display: flex;
@@ -91,14 +97,81 @@ path {
     color: #000000;
     font-weight: bold;
     border: none;
-    border-radius: 1rem;
     padding: 1rem;
-    font-size: 1em;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
 button:hover{
     background-color: #141414;
     color: #18BA29;
+    transform: translateX(10px), translateY(-10px);
+    box-shadow: 0 0 4rem #18BA29;
+    border-radius: .5rem;
+}
 
+
+.shareContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 3rem;
+    transition: all 0.5s;
+}
+
+.shareContainer a{
+    text-decoration: none;
+    color: #1da1f2;
+    font-size: 1rem;
+    transition: all 0.1s;
+}
+.shareContainer img{
+    width: 1.5rem;
+}
+.shareContainer a:hover{
+    font-size: 1.2rem
+
+}
+
+.hamnav {
+    width: 100%;
+    position: sticky;
+    display: flex;
+    top: 0;
+}
+.hamnav img{
+    width: 2.5rem;
+}
+
+#hamburger {
+    display: none;
+}
+
+.hamnav label {
+    display: inline-block;
+   color: #000000;
+    background-color: #18BA29;
+    padding: 1rem;
+}
+ 
+.aboutContainer {
+    background-color: #141414;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    text-align: left
+}
+
+.aboutContainer strong{
+    font-size: 1.5rem;
+    color: #18BA29;
+}
+.aboutContainer p{
+    padding-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+.hamnav input:checked ~ #aboutContainer {
+    display: block;
 }
