@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="index.css" rel="stylesheet" media="all" type="text/css">
-  <script src="index.js" defer></script>
+        <link href="index.css" rel="stylesheet" media="all" type="text/css">
+        <script src="index.js" defer></script>
 
-  <title>Twitter NFT generator</title>
-</head>
+        <title>Twitter NFT generator</title>
+    </head>
 
-<body>
+    <body>
 
-  <header>
-    <nav class="hamnav">
-      <label for="hamburger">&#9776;</label>
-      <input type="checkbox" id="hamburger" />
-      <div class="aboutContainer" id="aboutContainer">
-        <strong>About</strong>
-        <p>You can generate a custom profile picture with an hexagonal border similar to the one from Twitter.</p>
-        <p>Select the image, save the PNG, share it and make fun of NFT owners ;)</p>
-      </div>
-    </nav>
-    <h1 class="title">Want to make fun of NFT owners?</h1>
-    <h2 class="description">Create your own hexagon profile picture, <span class="forFree">for free</span>.</h2>
-  </header>
+        <header>
+            <nav class="hamnav">
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger" />
+                <div class="aboutContainer" id="aboutContainer">
+                    <strong>About</strong>
+                    <p>You can generate a custom profile picture with an hexagonal border similar to the one from Twitter.</p>
+                    <p>Select the image, save the PNG, share it and make fun of NFT owners ;)</p>
+                </div>
+            </nav>
+            <h1 class="title">Want to make fun of NFT owners?</h1>
+            <h2 class="description">Create your own hexagon profile picture, <span class="forFree">for free</span>.</h2>
+        </header>
 
-  <div class="container">
-    <!-- svg -->
-    <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="400" height="347"
-      viewbox="0 0 400 346.41016151377545">
-      <path fill="#000000"
-        d="M22.500000000000004 212.17622392718746Q0 173.20508075688772 22.500000000000004 134.23393758658798L77.5 38.97114317029974Q100 0 145 0L255 0Q300 0 322.5 38.97114317029974L377.5 134.23393758658798Q400 173.20508075688772 377.5 212.17622392718746L322.5 307.4390183434757Q300 346.41016151377545 255 346.41016151377545L145 346.41016151377545Q100 346.41016151377545 77.5 307.4390183434757Z">
-      </path>
-    </svg>
+        <div class="container">
+            <!-- svg -->
+            <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="400" height="347"
+                                                                                       viewbox="0 0 400 346.41016151377545">
+                <path fill="#000000"
+                      d="M22.500000000000004 212.17622392718746Q0 173.20508075688772 22.500000000000004 134.23393758658798L77.5 38.97114317029974Q100 0 145 0L255 0Q300 0 322.5 38.97114317029974L377.5 134.23393758658798Q400 173.20508075688772 377.5 212.17622392718746L322.5 307.4390183434757Q300 346.41016151377545 255 346.41016151377545L145 346.41016151377545Q100 346.41016151377545 77.5 307.4390183434757Z">
+                </path>
+            </svg>
 
-    <!-- canvas -->
-    <canvas id="canvas" height="0" width="0"></canvas>
+            <!-- canvas -->
+            <canvas id="canvas" height="0" width="0"></canvas>
 
-    <div class="buttonContainer">
-      <button onclick="document.getElementById('file-input').click();">
-        Select image
-      </button>
+            <div class="buttonContainer">
+                <button onclick="document.getElementById('file-input').click();">
+                    Select image
+                </button>
 
-      <input id="file-input" type="file" name="upload-image" style="display: none;" />
-    </div>
+                <input id="file-input" type="file" name="upload-image" style="display: none;" />
+            </div>
 
-    <div class="shareContainer">
-      <img src="twitterIcon.png" />
-      <a
-        href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fplatform.twitter.com%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=Want%20to%20make%20fun%20of%20NFT%20owners%3F&url=https%3A%2F%2Fgithub.com%2Fdrull1000">Share
-        on Twitter!</a>
-    </div>
-  </div>
+            <p class="advice">Open, generate and save.</p>
+            <div class="shareContainer">
+                <img src="twitterIcon.png" />
+                <a
+                    href="https://twitter.com/intent/tweet?hashtags=NFTProfilePicture%2CBlockChain%2CNFT&original_referer=https%3A%2F%2Fplatform.twitter.com%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=Generate%20your%20custom%20NFT%20profile%20picture%2C%20FOR%20FREE.&url=https%3A%2F%2Ftwitter-nft-generator.vercel.app%2F">Share
+                    on Twitter!</a>
+            </div>
+        </div>
 
-  <footer>
-    <p>footer</p>
-  </footer>
+        <footer>
+            <p></p>
+        </footer>
 
-</body>
+    </body>
 
 </html>
