@@ -1,48 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Share Tech Mono', monospace;
 }
-svg {
-  height: 500px;
-  width: 540px;
-}
-path {
-  stroke: #777;
-  fill: none;
+button{
+    transition: all 0.5s;
 }
 
-body {
-  background: white;
+body{
+    color: #18BA29;
+    background-color: #000000;
 }
+
+header{
+    text-align: center;
+}
+
+header h1{
+    font-size: 2.5rem;
+    margin-top: 5%;
+    margin-bottom: 2rem;
+}
+header h2, .forFree{
+    font-size: 1.5rem;
+}
+
+.forFree{
+    color: red;
+}   
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+svg {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: 20rem;
+    width: 50rem;
+}
+path {
+    stroke: #777;
+    fill: none;
+}
+
 .roundHex {
-  position: relative;
-  margin: 0 auto;
-  background: transparent;
-  border-radius: 10px;
-  height: 300px;
-  width: 180px;
-  box-sizing: border-box;
-  transition: all 1s;
-  border: 10px solid transparent;
-  border-top-color: black;
-  border-bottom-color: black;
+    position: relative;
+    margin: 0 auto;
+    background: transparent;
+    border-radius: 10px;
+    height: 300px;
+    width: 180px;
+    box-sizing: border-box;
+    transition: all 1s;
+    border: 10px solid transparent;
+    border-top-color: black;
+    border-bottom-color: black;
 }
 .roundHex:before,
 .roundHex:after {
-  content: "";
-  border: inherit;
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  background: inherit;
-  border-radius: inherit;
-  height: 100%;
-  width: 100%;
+    content: "";
+    border: inherit;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: inherit;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
 }
 .roundHex:before {
-  transform: rotate(60deg);
+    transform: rotate(60deg);
 }
 .roundHex:after {
-  transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.buttonContainer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.buttonContainer button{
+    background-color: #18BA29;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #141414;
+    color: #18BA29;
+
 }
