@@ -46,6 +46,19 @@ fileInput.addEventListener('change', (e) => {
       ctx.drawImage(hexagon, 5, 27, hexagonWidth, hexagonHeight);
 
       svgElement.remove()
+
+      let nft = canvas.toDataURL(); // default png
+
+        // download
+        let link = document.createElement('a');
+        link.download = 'image-nft.png';
+        link.style.opacity = "0";
+
+        document.append(link);
+
+        link.href = nft;
+        link.click();
+        link.remove();
     }
 
     image.src = event.target.result;
