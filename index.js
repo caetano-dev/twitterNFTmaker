@@ -49,16 +49,16 @@ fileInput.addEventListener('change', (e) => {
 
       let nft = canvas.toDataURL(); // default png
 
-        // download
-        let link = document.createElement('a');
-        link.download = 'image-nft.png';
-        link.style.opacity = "0";
+      // download
+      let link = document.createElement('a');
+      link.download = 'image-nft.png';
+      link.style.opacity = "0";
 
-        document.append(link);
+      document.body.append(link);
 
-        link.href = nft;
-        link.click();
-        link.remove();
+      link.href = nft;
+      link.click();
+      link.remove();
     }
 
     image.src = event.target.result;
