@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../assets/icon.png" />
-  <link rel="apple-touch-icon" href="..assets/icon.png" />
+
   <link href="index.css" rel="stylesheet" media="all" type="text/css">
-  <link rel="manifest" href="../manifest.json" />
+  <script src="index.js" defer></script>
+
   <title>Twitter NFT generator</title>
 </head>
 
@@ -26,29 +26,25 @@
     <h1 class="title">Want to make fun of NFT owners?</h1>
     <h2 class="description">Create your own hexagon profile picture, <span class="forFree">for free</span>.</h2>
   </header>
+
   <div class="container">
-    <svg viewBox='0 0 120 100'>
-      <path d='M38,2 
-                L82,2 
-                A12,12 0 0,1 94,10 
-                L112,44 
-                A12,12 0 0,1 112,56
-                L94,90       
-                A12,12 0 0,1 82,98
-                L38,98
-                A12,12 0 0,1 26,90
-                L8,56
-                A12,12 0 0,1 8,44
-                L26,10
-                A12,12 0 0,1 38,2' />
+    <!-- svg -->
+    <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="400" height="347"
+      viewbox="0 0 400 346.41016151377545">
+      <path fill="#000000"
+        d="M22.500000000000004 212.17622392718746Q0 173.20508075688772 22.500000000000004 134.23393758658798L77.5 38.97114317029974Q100 0 145 0L255 0Q300 0 322.5 38.97114317029974L377.5 134.23393758658798Q400 173.20508075688772 377.5 212.17622392718746L322.5 307.4390183434757Q300 346.41016151377545 255 346.41016151377545L145 346.41016151377545Q100 346.41016151377545 77.5 307.4390183434757Z">
+      </path>
     </svg>
-    <div class="hexagon">
-    </div>
+
+    <!-- canvas -->
+    <canvas id="canvas" height="0" width="0"></canvas>
+
     <div class="buttonContainer">
-      <button>
+      <button onclick="document.getElementById('file-input').click();">
         Select image
       </button>
-      <div class="shine"></div>
+
+      <input id="file-input" type="file" name="upload-image" style="display: none;" />
     </div>
 
     <div class="shareContainer">
@@ -58,11 +54,11 @@
         on Twitter!</a>
     </div>
   </div>
+
   <footer>
     <p>footer</p>
   </footer>
-  <script src="../script.js"></script>
-  <script src="../index.js"></script>
+
 </body>
 
 </html>
