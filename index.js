@@ -26,6 +26,12 @@ fileInput.addEventListener('change', (e) => {
       let width = image.width;
       let height = image.height;
 
+      let positionx = 0;
+      let positiony = 0;
+      
+      canvas.width = MAX_WIDTH;
+      canvas.height = MAX_HEIGHT;
+
       if (width > height) {
         if (width > MAX_WIDTH) {
           height = height * (MAX_WIDTH / width);
@@ -38,18 +44,31 @@ fileInput.addEventListener('change', (e) => {
         }
       }
 
-      canvas.width = width;
-      canvas.height = height;
+      if (height < MAX_HEIGHT) {
+        positiony = (MAX_HEIGHT - height) / 2
+      } 
 
-      ctx.drawImage(image, 0, 0, width, height);
+      if (width < MAX_WIDTH) {
+        positionx = (MAX_WIDTH - width) / 2
+      }
+
+      if (height < MAX_HEIGHT && width < MAX_WIDTH) {
+        width = MAX_WIDTH
+        height = MAX_HEIGHT
+        positiony = 0
+        positionx = 0
+      }
+
+      ctx.drawImage(image, positionx, positiony, width, height);
       ctx.globalCompositeOperation = 'destination-atop';
       ctx.drawImage(hexagon, 5, 27, hexagonWidth, hexagonHeight);
 
+      console.log(width, height)
+      console.log(hexagonWidth, hexagonHeight)
+
       svgElement.remove()
 
-      let nft = canvas.toDataURL(); // default png
-
-      // download
+      let nft = canvas.toDataURL();
       let link = document.createElement('a');
       link.download = 'image-nft.png';
       link.style.opacity = "0";
@@ -63,6 +82,8 @@ fileInput.addEventListener('change', (e) => {
 
     image.src = event.target.result;
   }
+
+  console.log(e.target.files);
 
   reader.readAsDataURL(e.target.files[0]);
 
