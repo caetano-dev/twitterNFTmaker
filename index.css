@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 * {
+    transition: all 0.5s;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -176,4 +177,20 @@ button:hover {
 
 .hamnav input:checked ~ #aboutContainer {
     display: block;
+}
+.coin{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    word-break: break-all;
+}
+.coin:hover{
+    background-color: #18ba29;
+    color: #141414;
+    border-radius: .3rem;
+}
+
+.coin img{
+    padding-right: .5rem;
 }
